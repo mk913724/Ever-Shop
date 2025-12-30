@@ -1,0 +1,1126 @@
+{
+	"info": {
+		"_postman_id": "bef65c8c-a430-4ffc-ab94-dbfc709670ed",
+		"name": "Ever Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49823874",
+		"_collection_link": "https://mk57585915-2148881.postman.co/workspace/efefa5a8-bbdf-4a41-8252-3b043a431899/collection/49823874-bef65c8c-a430-4ffc-ab94-dbfc709670ed?action=share&source=collection_link&creator=49823874"
+	},
+	"item": [
+		{
+			"name": "Creating account",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"full_name\": \"monir\",\r\n    \"email\": \"mk15vbhjbhj@gmail.com\",\r\n    \"password\": \"123456\"\r\n      \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/customers",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"customers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "name vallidation issue, taking 1 characater",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"\",\r\n    \"email\": \"mk15@gmail.com\",\r\n    \"password\": \"123456\"\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "taking name: 256character",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"monir\",\r\n    \"email\": \"mk15@gmail.com\",\r\n    \"password\": \"123456\"\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "username trims leading , internal & Trailng, empty",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"monir\",\r\n    \"email\": \"mk15@gmail.com\",\r\n    \"password\": \"123456\"\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "user name only special character",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"monir\",\r\n    \"email\": \"mk15@gmail.com\",\r\n    \"password\": \"123456\"\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Email taking invallid format",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"monir\",\r\n    \"email\": \"mk15@gmail.com\",\r\n    \"password\": \"123456\"\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "password taking so weak",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"monir\",\r\n    \"email\": \"mk15@gmail.com\",\r\n    \"password\": \"123456\"\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "Creating account",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"full_name\": \"monir\",\r\n    \"email\": \"mk15@gmail.com\",\r\n    \"password\": \"123456\"\r\n      \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "id log in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"MK15@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/customer/login",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"customer",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "id log in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"mk15@gmail.com\",\r\n  \"password\": \"123456\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/customer/login",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"customer",
+								"login"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "password recovery",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"MK15@GMAIL.COM\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/customers/reset-password",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"customers",
+						"reset-password"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "password recovery with unused email in log in",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"MK15@GMAIL.COM\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers/reset-password",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers",
+								"reset-password"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Search products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://demo.evershop.io/accessories?color%5Boperation%5D=in&color%5Bvalue%5D=2%2C1&ajax=true",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"accessories"
+					],
+					"query": [
+						{
+							"key": "color%5Boperation%5D",
+							"value": "in"
+						},
+						{
+							"key": "color%5Bvalue%5D",
+							"value": "2%2C1"
+						},
+						{
+							"key": "ajax",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add to cart with single black product",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"sku\": \"THERMO-005-BLK\",\r\n  \"qty\": 1,\r\n  \"variant_options\": [\r\n    {\r\n      \"attribute_id\": 1,\r\n      \"option_id\": 1\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/cart/4e21d3f2-1710-4036-a31a-fbc4cac37693/items",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"cart",
+						"4e21d3f2-1710-4036-a31a-fbc4cac37693",
+						"items"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add to cart with double black products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sku\": \"THERMO-005-BLK\",\r\n  \"qty\": 2,\r\n  \"variant_options\": [\r\n    {\r\n      \"attribute_id\": 1,\r\n      \"option_id\": 1\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/cart/4e21d3f2-1710-4036-a31a-fbc4cac37693/items",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"cart",
+								"4e21d3f2-1710-4036-a31a-fbc4cac37693",
+								"items"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				},
+				{
+					"name": "add to cart with white produtc",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"sku\": \"THERMO-005-BLK\",\r\n  \"qty\": 2,\r\n  \"variant_options\": [\r\n    {\r\n      \"attribute_id\": 1,\r\n      \"option_id\": 1\r\n    }\r\n  ]\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/cart/4e21d3f2-1710-4036-a31a-fbc4cac37693/items",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"cart",
+								"4e21d3f2-1710-4036-a31a-fbc4cac37693",
+								"items"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "view cart",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\":{}}"
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/cart?ajax=true",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"cart"
+					],
+					"query": [
+						{
+							"key": "ajax",
+							"value": "true"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "increase  quantity in the cart",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"qty\": 1, \r\n    \"action\": \"increase\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/cart/64f1eaaa-9d70-4963-82a3-c28066835269/items/276866c4-baa8-4257-9efa-cfb767b45a39",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"cart",
+						"64f1eaaa-9d70-4963-82a3-c28066835269",
+						"items",
+						"276866c4-baa8-4257-9efa-cfb767b45a39"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "decrease quantity in the cart",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"qty\": 1, \r\n    \"action\": \"decrease\"\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/cart/4e21d3f2-1710-4036-a31a-fbc4cac37693/items/39764946-4f19-4f90-9ab9-f27a980b89fb",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"cart",
+								"4e21d3f2-1710-4036-a31a-fbc4cac37693",
+								"items",
+								"39764946-4f19-4f90-9ab9-f27a980b89fb"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "check_OUT",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"allowedCountries\": [\r\n            {\r\n                \"value\": \"US\",\r\n                \"label\": \"United States\",\r\n                \"provinces\": [\r\n                    {\r\n                        \"label\": \"Alabama\",\r\n                        \"value\": \"US-AL\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Alaska\",\r\n                        \"value\": \"US-AK\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Arizona\",\r\n                        \"value\": \"US-AZ\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Arkansas\",\r\n                        \"value\": \"US-AR\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"California\",\r\n                        \"value\": \"US-CA\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Colorado\",\r\n                        \"value\": \"US-CO\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Connecticut\",\r\n                        \"value\": \"US-CT\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Delaware\",\r\n                        \"value\": \"US-DE\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"District of Columbia\",\r\n                        \"value\": \"US-DC\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Florida\",\r\n                        \"value\": \"US-FL\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Georgia\",\r\n                        \"value\": \"US-GA\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Hawaii\",\r\n                        \"value\": \"US-HI\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Idaho\",\r\n                        \"value\": \"US-ID\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Illinois\",\r\n                        \"value\": \"US-IL\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Indiana\",\r\n                        \"value\": \"US-IN\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Iowa\",\r\n                        \"value\": \"US-IA\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Kansas\",\r\n                        \"value\": \"US-KS\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Kentucky\",\r\n                        \"value\": \"US-KY\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Louisiana\",\r\n                        \"value\": \"US-LA\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Maine\",\r\n                        \"value\": \"US-ME\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Maryland\",\r\n                        \"value\": \"US-MD\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Massachusetts\",\r\n                        \"value\": \"US-MA\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Michigan\",\r\n                        \"value\": \"US-MI\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Minnesota\",\r\n                        \"value\": \"US-MN\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Mississippi\",\r\n                        \"value\": \"US-MS\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Missouri\",\r\n                        \"value\": \"US-MO\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Montana\",\r\n                        \"value\": \"US-MT\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Nebraska\",\r\n                        \"value\": \"US-NE\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Nevada\",\r\n                        \"value\": \"US-NV\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"New Hampshire\",\r\n                        \"value\": \"US-NH\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"New Jersey\",\r\n                        \"value\": \"US-NJ\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"New Mexico\",\r\n                        \"value\": \"US-NM\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"New York\",\r\n                        \"value\": \"US-NY\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"North Carolina\",\r\n                        \"value\": \"US-NC\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"North Dakota\",\r\n                        \"value\": \"US-ND\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Ohio\",\r\n                        \"value\": \"US-OH\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Oklahoma\",\r\n                        \"value\": \"US-OK\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Oregon\",\r\n                        \"value\": \"US-OR\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Pennsylvania\",\r\n                        \"value\": \"US-PA\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Rhode Island\",\r\n                        \"value\": \"US-RI\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"South Carolina\",\r\n                        \"value\": \"US-SC\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"South Dakota\",\r\n                        \"value\": \"US-SD\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Tennessee\",\r\n                        \"value\": \"US-TN\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Texas\",\r\n                        \"value\": \"US-TX\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Utah\",\r\n                        \"value\": \"US-UT\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Vermont\",\r\n                        \"value\": \"US-VT\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Virginia\",\r\n                        \"value\": \"US-VA\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Washington\",\r\n                        \"value\": \"US-WA\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"West Virginia\",\r\n                        \"value\": \"US-WV\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Wisconsin\",\r\n                        \"value\": \"US-WI\",\r\n                        \"__typename\": \"Province\"\r\n                    },\r\n                    {\r\n                        \"label\": \"Wyoming\",\r\n                        \"value\": \"US-WY\",\r\n                        \"__typename\": \"Province\"\r\n                    }\r\n                ],\r\n                \"__typename\": \"Country\"\r\n            }\r\n        ]\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/graphql",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Coupon",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"coupon\" : \"rtgerg\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/carts/4e21d3f2-1710-4036-a31a-fbc4cac37693/coupons",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"carts",
+						"4e21d3f2-1710-4036-a31a-fbc4cac37693",
+						"coupons"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add new address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n {\r\n       \r\n        \"full_name\": \"Jeromias Birds\",\r\n        \"telephone\": \"+1 (494) 692-9914\",\r\n        \"address_1\": \"432 Clarendon Road\",\r\n        \"address_2\": \"Earum id consequatur\",\r\n        \"city\": \"Assumenda vitae earu\",\r\n\"country\": \"US\",\r\n \"province\": \"US-UT\",\r\n        \"postcode\": \"680\"\r\n        \r\n       \r\n        \r\n        \r\n    }\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/customers/8d355e2a-1ad2-4bb2-88ce-a37dba955fa6/addresses",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"customers",
+						"8d355e2a-1ad2-4bb2-88ce-a37dba955fa6",
+						"addresses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add new address",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n        \"customer_address_id\": 6,\r\n        \"uuid\": \"90a719d8-ea12-4566-9b0d-e3c5f280760b\",\r\n        \"customer_id\": 125,\r\n        \"full_name\": \"Jerome Bird\",\r\n        \"telephone\": \"+1 (494) 692-9914\",\r\n        \"address_1\": \"432 Clarendon Road\",\r\n        \"address_2\": \"Earum id consequatur\",\r\n        \"postcode\": \"Aut accusamus explic\",\r\n        \"city\": \"Assumenda vitae earu\",\r\n        \"province\": \"US-UT\",\r\n        \"country\": \"US\",\r\n        \"created_at\": \"2025-12-28T20:09:30.939Z\",\r\n        \"updated_at\": \"2025-12-28T20:09:30.939Z\",\r\n        \"is_default\": true,\r\n        \"insertId\": 6,\r\n        \"links\": [\r\n            {\r\n                \"rel\": \"edit\",\r\n                \"href\": \"/api/customers/8d355e2a-1ad2-4bb2-88ce-a37dba955fa6/addresses/90a719d8-ea12-4566-9b0d-e3c5f280760b\",\r\n                \"action\": \"UPDATE\",\r\n                \"types\": [\r\n                    \"application/json\"\r\n                ]\r\n            },\r\n            {\r\n                \"rel\": \"delete\",\r\n                \"href\": \"/api/customers/8d355e2a-1ad2-4bb2-88ce-a37dba955fa6/addresses/90a719d8-ea12-4566-9b0d-e3c5f280760b\",\r\n                \"action\": \"DELETE\",\r\n                \"types\": [\r\n                    \"application/json\"\r\n                ]\r\n            }\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers/8d355e2a-1ad2-4bb2-88ce-a37dba955fa6/addresses",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers",
+								"8d355e2a-1ad2-4bb2-88ce-a37dba955fa6",
+								"addresses"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				},
+				{
+					"name": "add new address",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"data\": {\r\n       \r\n        \"full_name\": \"Jerome Bird\",\r\n        \"telephone\": \"+1 (494) 692-9914\",\r\n        \"address_1\": \"432 Clarendon Road\",\r\n        \"address_2\": \"Earum id consequatur\",\r\n        \"postcode\": \"Aut accusamus explic\",\r\n        \"city\": \"Assumenda vitae earu\",\r\n        \"province\": \"US-UT\",\r\n        \"country\": \"US\"\r\n        \r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers/8d355e2a-1ad2-4bb2-88ce-a37dba955fa6/addresses",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers",
+								"8d355e2a-1ad2-4bb2-88ce-a37dba955fa6",
+								"addresses"
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Modify address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n {\r\n       \r\n        \"full_name\": \"Jerome BirdsmkmM\"\r\n       \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/customers/8d355e2a-1ad2-4bb2-88ce-a37dba955fa6/addresses/ecc43527-0d49-44ed-a46b-df361da0606f",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"customers",
+						"8d355e2a-1ad2-4bb2-88ce-a37dba955fa6",
+						"addresses",
+						"ecc43527-0d49-44ed-a46b-df361da0606f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delet Address",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {},
+						"requests": {}
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/api/customers/8d355e2a-1ad2-4bb2-88ce-a37dba955fa6/addresses/ecc43527-0d49-44ed-a46b-df361da0606f",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"api",
+						"customers",
+						"8d355e2a-1ad2-4bb2-88ce-a37dba955fa6",
+						"addresses",
+						"ecc43527-0d49-44ed-a46b-df361da0606f"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delet Address",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://demo.evershop.io/api/customers/8d355e2a-1ad2-4bb2-88ce-a37dba955fa6/addresses/1c5ff487-ace9-4044-b4bc-929e60e6b228\n",
+							"protocol": "https",
+							"host": [
+								"demo",
+								"evershop",
+								"io"
+							],
+							"path": [
+								"api",
+								"customers",
+								"8d355e2a-1ad2-4bb2-88ce-a37dba955fa6",
+								"addresses",
+								"1c5ff487-ace9-4044-b4bc-929e60e6b228\n"
+							]
+						}
+					},
+					"_postman_previewlanguage": "",
+					"header": [],
+					"cookie": [
+						{
+							"expires": "Invalid Date",
+							"domain": "",
+							"path": ""
+						}
+					],
+					"body": ""
+				}
+			]
+		},
+		{
+			"name": "log out",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\":{}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://demo.evershop.io/customer/logout",
+					"protocol": "https",
+					"host": [
+						"demo",
+						"evershop",
+						"io"
+					],
+					"path": [
+						"customer",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
